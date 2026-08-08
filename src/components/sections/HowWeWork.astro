@@ -46,7 +46,7 @@ const stepsImages = [
                   <h3 class="typo-h6 text-balance">{step.title}</h3>
                 </div>
 
-                <div class="flex-1 shrink-0 relative grid place-items-center w-[min(27rem,100%)] justify-center aspect-430/230 rounded-4xl add-gradient-accent">
+                <div class="flex-1 shrink-0 relative grid place-items-center w-[min(27rem,100%)] justify-center aspect-430/230">
                   <img class={`absolute h-max max-h-[120%] pointer-events-none`} src={step.image} alt="" loading="lazy" />
                 </div>
               </div>
@@ -63,7 +63,7 @@ const stepsImages = [
             const isEven = index % 2 === 1;
 
             return (
-              <div class={`_step grid grid-cols-1 md:grid-cols-2 max-lg:gap-5 p-4 md:p-5 lg:p-10 rounded-3xl bg-white`}>
+              <div class={`_step grid grid-cols-1 md:grid-cols-2 max-lg:gap-5 p-4 md:p-5 lg:p-10 bg-white`}>
                 <div class="flex md:flex-col">
                   <div class="md:contents">
                     <h3 class="typo-h5-x2">{step.title}</h3>
@@ -73,7 +73,7 @@ const stepsImages = [
                   <div class={`md:mt-auto text-surface-primary-inverse typo-h3-x2`}>{index + 1}.</div>
                 </div>
 
-                <div class="grid place-items-center justify-self-center max-lg:max-w-[80%] aspect-square rounded-full bg-[#F2F4FA]">
+                <div class="grid place-items-center justify-self-center max-lg:max-w-[80%] aspect-square bg-[#F2F4FA]">
                   <img class={`pointer-events-none`} src={step.image} alt="" loading="lazy" />
                 </div>
               </div>

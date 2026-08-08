@@ -7,9 +7,8 @@
 }
 
 :root {
-  --site-font-base: "Mulish", sans-serif;
-  --site-font-heading: "Dela Gothic One", sans-serif;
-  --site-font-montserrat: "Montserrat", sans-serif;
+  --site-font-base: "Golos Text", sans-serif;
+  --site-font-heading: "Mulish", sans-serif;
 }
 
 @utility font-base {
@@ -18,29 +17,6 @@
 
 @utility font-heading {
   font-family: var(--site-font-heading);
-}
-
-@utility font-montserrat {
-  font-family: var(--site-font-montserrat);
-}
-
-@utility add-gradient {
-  background: radial-gradient(
-    81.01% 188.26% at 87.61% -14.69%,
-    #51acf6 0%,
-    #2962d0 100%
-  );
-}
-
-@utility add-gradient-accent {
-  background: linear-gradient(270deg, #FF9D4A 0%, #FF8B3E 100%);
-}
-
-@utility add-text-gradient {
-  background: linear-gradient(180deg, #ffa04c 0%, #ff7c34 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
 }
 
 /* ===== HEADINGS ===== */

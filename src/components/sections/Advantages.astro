@@ -38,7 +38,7 @@ const advantages = [
 ];
 ---
 
-<section class="py-8 md:py-10 lg:py-25 mx-2 lg:mx-5 rounded-[20px] md:rounded-[40px] add-gradient" data-cmp="Advantages">
+<section class="py-8 md:py-10 lg:py-25 mx-2 lg:mx-5 add-gradient" data-cmp="Advantages">
   <div class="container">
     <h2 class="typo-h3 uppercase mb-8 md:12 lg:mb-16 text-text-primary-inverse text-center">Преимущества аутсорса</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
@@ -47,7 +47,7 @@ const advantages = [
         <div class="flex flex-col gap-2.5">
           {
             advantages?.map((advantage: any) => (
-              <div class="flex items-center gap-6 lg:gap-10 p-4 lg:p-7 rounded-3xl bg-white/20">
+              <div class="flex items-center gap-6 lg:gap-10 p-4 lg:p-7 bg-white/20">
                 <div class="flex items-center justify-center">
                   <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="55" height="55" rx="27.5" fill="#FFE063" />
@@ -86,9 +86,9 @@ const advantages = [
           {
             advantages?.map((advantage: any) => (
               <div
-                class={`flex items-center gap-6 lg:gap-10 p-4 lg:p-7 rounded-3xl ${advantage.checked ? "bg-white/20 text-text-primary-inverse" : "text-text-primary-inverse"}`}
+                class={`flex items-center gap-6 lg:gap-10 p-4 lg:p-7 ${advantage.checked ? "bg-white/20 text-text-primary-inverse" : "text-text-primary-inverse"}`}
               >
-                <div class="flex items-center justify-center rounded-full text-text-primary-inverse">
+                <div class="flex items-center justify-center text-text-primary-inverse">
                   {advantage.checked ? (
                     <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <rect width="55" height="55" rx="27.5" fill="#FFE063" />

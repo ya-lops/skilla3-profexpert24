@@ -19,7 +19,7 @@ const { brandData } = Astro.props;
         {brandData.feedbacks?.map((testimonial: any) => (
           <div class="grid grid-cols-1 md:grid-cols-[23rem_1fr] gap-4 md:gap-6 py-10 not-last:border-b not-last:border-b-outline">
             <div class="flex items-center gap-7">
-              <div class="flex items-start justify-center w-19 h-19 aspect-square rounded-xl overflow-clip">
+              <div class="flex items-start justify-center w-19 h-19 aspect-square overflow-clip">
                 {testimonial.avatar ? (
                   <img
                     class="w-full h-full object-cover object-top pointer-events-none"

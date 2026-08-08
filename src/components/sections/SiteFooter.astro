@@ -16,7 +16,7 @@ interface Props {
 const { brandData } = Astro.props;
 ---
 
-<footer class="m-2 lg:m-5 rounded-[20px] md:rounded-[40px] add-gradient" data-cmp="SiteFooter">
+<footer class="" data-cmp="SiteFooter">
   <div class="">
     <div class="container">
       <div class="flex flex-col xl:flex-row items-start gap-8 justify-between py-15">
@@ -110,7 +110,7 @@ const { brandData } = Astro.props;
                     <li class="_footer-document flex items-baseline gap-2">
                       <span class="flex gap-2">{document.name}</span>
                       <a
-                        class="_footer-document-format-link py-0.5 px-1.25 rounded-md text-text-primary-inverse hover:text-text-primary bg-[#1E1E26] hover:bg-accent transition-colors"
+                        class="_footer-document-format-link py-0.5 px-1.25 text-text-primary-inverse hover:text-text-primary bg-[#1E1E26] hover:bg-accent transition-colors"
                         href={`${STORAGE_PATH}${document.path}`}
                         download={document.filename}
                       >

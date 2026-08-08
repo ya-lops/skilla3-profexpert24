@@ -22,7 +22,7 @@ const images = (brandData.partners?.thank_letters || []).map((item: string) => (
         images.map((image) => (
           <div class="flex flex-col gap-6 hover:scale-110 transition-transform">
             <a href={image.src} data-fancybox="thanks-gallery">
-              <img class="rounded-xl cursor-pointer" src={image.thumb} alt="Изображение благодарности" loading="lazy" />
+              <img class="cursor-pointer" src={image.thumb} alt="Изображение благодарности" loading="lazy" />
             </a>
           </div>
         ))

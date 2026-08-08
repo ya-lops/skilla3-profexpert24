@@ -53,7 +53,7 @@ if (!article) {
           <img 
             src={article.cover} 
             alt={article.title}
-            class="rounded-3xl w-full"
+            class="w-full"
             itemprop="image"
           />
         )}
@@ -78,10 +78,6 @@ if (!article) {
 
     & p {
       @apply max-w-[45.625rem] mt-6 font-normal;
-    }
-
-    & img {
-      @apply rounded-3xl;
     }
 
     & :where(ol, ul) {

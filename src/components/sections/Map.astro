@@ -12,14 +12,14 @@ const citiesJson = JSON.stringify(mapData.cities);
 const cityCount = mapData.city_count;
 ---
 
-{simple && <div id="map" class="h-80 lg:h-105 rounded-2xl overflow-clip" data-cmp="Map"/>}
+{simple && <div id="map" class="h-80 lg:h-105 overflow-clip" data-cmp="Map"/>}
 
 {
   !simple && (
     <section class="pb-20" data-cmp="Map">
       <div class="container">
         <h2 class="typo-h3 text-center max-w-225 mb-8 md:12 lg:mb-16 text-balance mx-auto">Работаем в более чем в {cityCount} городах России</h2>
-        <div id="map" class="_map-body h-80 lg:h-105 rounded-2xl overflow-clip" />
+        <div id="map" class="_map-body h-80 lg:h-105 overflow-clip" />
       </div>
     </section>
   )

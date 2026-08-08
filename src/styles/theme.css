@@ -1,23 +1,23 @@
 @theme {
-  --color-accent: #ff8f2b;
+  --color-accent: hsla(343, 63%, 45%, 1);
   --color-outline: hsla(228, 6%, 85%, 1);
 
-  --color-text-primary: hsla(240, 10%, 19%, 1);
+  --color-text-primary: hsla(220, 66%, 13%, 1);
   --color-text-primary-inverse: hsla(0, 0%, 100%, 1);
-  --color-text-secondary: hsla(0, 0%, 27%, 0.6);
+  --color-text-secondary: hsla(220, 66%, 13%, 0.8);
   --color-text-secondary-inverse: hsla(0, 0%, 100%, 0.8);
-  --color-text-tertiary: hsla(211, 33%, 15%, 1);
+  --color-text-tertiary: hsla(220, 66%, 13%, 0.6);
   --color-text-tertiary-inverse: hsla(0, 0%, 100%, 0.6);
 
   --color-surface-primary: hsla(0, 0%, 100%, 1);
-  --color-surface-primary-inverse: hsla(240, 10%, 19%, 1);
-  --color-surface-secondary: hsla(48, 100%, 69%, 1);
-  --color-surface-secondary-inverse: hsla(240, 12%, 13%, 1);
+  --color-surface-primary-inverse: hsla(220, 66%, 13%, 1);
+  --color-surface-secondary: hsla(220, 20%, 94%, 1);
+  --color-surface-secondary-inverse: hsla(220, 27%, 89%, 1);
   --color-surface-blur: hsla(240, 3%, 15%, 0.75);
 
-  --color-surface-input: hsla(0, 0%, 100%, 1);
-  --color-text-input: hsla(240, 10%, 19%, 1);
-  --color-text-input-label: hsla(240, 10%, 19%, 1);
+  --color-surface-input: transparent;
+  --color-text-input: hsla(0, 0%, 100%, 1);
+  --color-text-input-label: hsla(0, 0%, 100%, 1);
 
   --color-button-surface-primary: hsla(0, 0%, 100%, 1);
   --color-button-surface-secondary: transparent;
@@ -25,12 +25,8 @@
   --color-button-border: transparent;
   --color-button-border-inverse: transparent;
 
-  --color-mobile-menu-surface: radial-gradient(
-    81.01% 188.26% at 87.61% -14.69%,
-    #51acf6 0%,
-    #2962d0 100%
-  );
-  --color-mobile-menu-text: var(--color-text-primary-inverse);
+  --color-mobile-menu-surface: hsla(0, 0%, 100%, 1);
+  --color-mobile-menu-text: var(--color-text-primary);
 
   --color-toast-surface: hsla(240, 10%, 19%, 1);
   --color-toast-text: hsla(0, 0%, 100%, 1);

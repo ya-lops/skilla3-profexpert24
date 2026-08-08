@@ -21,7 +21,7 @@ const features = [
 <section class="flex flex-wrap justify-center gap-1.5 md:gap-2.5" data-cmp="HeroAboutFeatures">
   {
     features.map((feature) => (
-      <div class="typo-label py-2 px-3 rounded-full border border-text-primary font-semibold">
+      <div class="typo-label py-2 px-3 border border-text-primary font-semibold">
         <Fragment set:html={feature.text} />
       </div>
     ))
