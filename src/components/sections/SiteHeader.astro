@@ -37,7 +37,7 @@ const links = [
     class:list={[isDarkPage ? "text-text-primary-inverse" : "text-text-primary"]}
     :class="stuck ? 'bg-white border-b-outline! text-text-primary!' : 'bg-header-surface'"
   >
-    <div class="mx-6 md:mx-20">
+    <div class="container">
       <div class="flex items-center justify-between gap-4 lg:gap-20 py-4 lg:py-6">
         <div class="_header-logo">
           <a href="/" class:list={[isDarkPage ? "text-white" : "text-black"]} :class="stuck ? 'text-black!' : ''">
@@ -72,11 +72,11 @@ const links = [
           </div>
 
           <div class="_header-contact-actions flex items-center gap-4">
-            <Button href="#contact" text="Позвонить" variant="accent" />
             {/* Условие для отображения личного кабинета, нужно брать из админки */}
             {/* сейчас просто написано чтото рандомное */}
             {/* в MobileNav.astro тоже */}
-            {brandData.main?.showPersonal && <Button href="#personal" text="Личный кабинет" variant="primary" />}
+            {brandData.main?.showPersonal && <Button href="#personal" text="Личный кабинет" variant="secondary" />}
+            <Button href="#contact" text="Позвонить" variant="primary" />
           </div>
         </div>
 

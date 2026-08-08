@@ -35,11 +35,11 @@ const defaultCover = brandData.default.blog_default_cover;
                 <meta itemprop="datePublished" content={blogpost.date_create} />
 
                 <a
-                  class="flex flex-col items-start gap-4 text-left hover:[&_img]:scale-105 [&_img]:transition-transform"
+                  class="flex flex-col items-end gap-4 text-left hover:[&_img]:scale-105 [&_img]:transition-transform"
                   href={`/blog/${blogpost.url}`}
                   itemprop="url"
                 >
-                  <div class="flex h-full aspect-1280/720 overflow-clip">
+                  <div class="flex h-full aspect-1280/720 overflow-clip clip-rect-bl" style="--_clip-rect-size: 2.9rem;">
                     {blogpost.cover ? (
                       <img
                         src={blogpost.cover}
@@ -59,13 +59,13 @@ const defaultCover = brandData.default.blog_default_cover;
                     )}
                   </div>
 
-                  <h3 class="px-4 typo-h4 text-left" itemprop="name">
+                  <h3 class="px-4 typo-h5 text-right" itemprop="name">
                     {blogpost.title || "Запись блога"}
                   </h3>
-                  <p class="px-4 typo-t3" itemprop="description">
+                  <p class="px-4 typo-t3 text-right" itemprop="description">
                     {blogpost.subtitle || ""}
                   </p>
-                  <div class="px-4 typo-label">{blogpost.date_create || ""}</div>
+                  <div class="px-4 typo-label text-right">{blogpost.date_create || ""}</div>
                 </a>
               </article>
             ))}

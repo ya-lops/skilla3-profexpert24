@@ -11,28 +11,67 @@ interface Props {
 const { brandData } = Astro.props;
 ---
 
-<section
-  class="hero grid grid-cols-[100%] min-h-[510px] md:min-h-[1000px] mt-[-120px] pt-[110px] lg:mt-[-110px] lg:pt-[120px] overflow-clip"
-  data-cmp="HeroMain"
->
-  <div class="relative h-full isolate">
-    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,3fr)_minmax(0,1fr)] h-full items-center isolate">
-      <div class="relative z-1 flex flex-col gap-7 lg:gap-10 py-7 lg:py-14 px-4 lg:px-25">
-        <h1 class="flex flex-col typo-h1 uppercase my-auto">
-          <span class="add-text-gradient">Услуги</span>
-          <span class="add-text-gradient">грузчиков</span>
-          <span class="text-text-primary-inverse">В {brandData.main.city_rod}</span>
-        </h1>
-        <div class="max-w-200">
-          <HeroMainFeatures {brandData} />
-        </div>
-        <div class="mt-auto">
+<section class="hero grid grid-cols-[100%] mt-[-120px] lg:mt-[-110px] overflow-clip" data-cmp="HeroMain">
+  <div class="container h-full _container-decor">
+    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_clamp(320px,33%,546px)] gap-7 h-full isolate">
+      <div class="_start-col flex flex-col gap-7 lg:gap-10 bg-[#0B1936] pt-[150px] pb-[80px] mb-(--_clip-rect-size)">
+        <h1 class="flex flex-col typo-h1 text-text-primary-inverse py-12 lg:py-15">Рабочий персонал от лидера рынка</h1>
+        <div class="flex max-lg:flex-col gap-6 lg:gap-12 lg:items-center mt-auto">
           <Button href="#kp" variant="accent" text="Получить КП" />
+          <p class="text-text-primary-inverse text-balance max-w-140">Предоставим персонал для разных видов работ — быстро, качественно и вовремя</p>
         </div>
       </div>
-      <div class="relative z-0 self-end flex items-center justify-end">
-        <img src="/images/hero-main.webp" alt="" fetchpriority="high" class="lg:max-w-max pointer-events-none" />
+
+      <div class="_end-col">
+        <!-- <img src="/images/hero-main.webp" alt="" fetchpriority="high" class="lg:max-w-max pointer-events-none" /> -->
       </div>
     </div>
   </div>
 </section>
+
+<style is:global>
+  [data-cmp="HeroMain"] {
+    ._start-col {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        right: 99%;
+        left: auto;
+        width: 50vw;
+        background: #0b1936;
+      }
+    }
+
+    ._end-col {
+      position: relative;
+      box-shadow: 1.75rem 0 0 0 #fff;
+      margin-right: -1.75rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        inset: 0;
+        background: #bd2b54;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, var(--_clip-rect-size) 100%, 0 calc(100% - var(--_clip-rect-size)));
+      }
+
+      &::after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: auto;
+        left: 99%;
+        width: 50vw;
+        background: #bd2b54;
+      }
+    }
+  }
+</style>

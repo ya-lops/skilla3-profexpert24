@@ -9,6 +9,12 @@
 :root {
   --site-font-base: "Golos Text", sans-serif;
   --site-font-heading: "Mulish", sans-serif;
+
+  --_clip-rect-size: 2.125rem;
+
+  @media (width >= 64rem) {
+    --_clip-rect-size: 4.25rem;
+  }
 }
 
 @utility font-base {
@@ -17,6 +23,118 @@
 
 @utility font-heading {
   font-family: var(--site-font-heading);
+}
+
+@utility add-clip-rect-br {
+  @apply relative isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - var(--_clip-rect-size)),
+      calc(100% - var(--_clip-rect-size)) 100%,
+      0 100%
+    );
+  }
+}
+
+@utility add-clip-rect-bl {
+  @apply relative isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      var(--_clip-rect-size) 100%,
+      0 calc(100% - var(--_clip-rect-size))
+    );
+  }
+}
+
+@utility add-clip-rect-tr {
+  @apply relative isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    clip-path: polygon(
+      0 0,
+      calc(100% - var(--_clip-rect-size)) 0,
+      100% var(--_clip-rect-size),
+      100% 100%,
+      0 100%
+    );
+  }
+}
+
+@utility add-clip-rect-tl {
+  @apply relative isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    clip-path: polygon(
+      var(--_clip-rect-size) 0,
+      100% 0,
+      100% 100%,
+      0% 100%,
+      0 var(--_clip-rect-size)
+    );
+  }
+}
+
+@utility clip-rect-br {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - var(--_clip-rect-size)),
+    calc(100% - var(--_clip-rect-size)) 100%,
+    0 100%
+  );
+}
+
+@utility clip-rect-bl {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    var(--_clip-rect-size) 100%,
+    0 calc(100% - var(--_clip-rect-size))
+  );
+}
+
+@utility clip-rect-tr {
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--_clip-rect-size)) 0,
+    100% var(--_clip-rect-size),
+    100% 100%,
+    0 100%
+  );
+}
+
+@utility clip-rect-tl {
+  clip-path: polygon(
+    var(--_clip-rect-size) 0,
+    100% 0,
+    100% 100%,
+    0% 100%,
+    0 var(--_clip-rect-size)
+  );
 }
 
 /* ===== HEADINGS ===== */
