@@ -16,8 +16,8 @@ interface Props {
 const { brandData } = Astro.props;
 ---
 
-<footer class="" data-cmp="SiteFooter">
-  <div class="">
+<footer class="mt-7" data-cmp="SiteFooter">
+  <div class="bg-[#0B1936]">
     <div class="container">
       <div class="flex flex-col xl:flex-row items-start gap-8 justify-between py-15">
         <div class="flex flex-col gap-8">
@@ -128,12 +128,12 @@ const { brandData } = Astro.props;
         {/* Условие для отображения личного кабинета, нужно брать из админки */}
         {/* сейчас просто написано чтото рандомное */}
         {/* в MobileNav.astro тоже */}
-        {brandData.main?.showPersonal && <BlockAppSkilla />}
+        {!brandData.main?.showPersonal && <BlockAppSkilla />}
       </div>
     </div>
   </div>
 
-  <div class="font-montserrat text-text-primary-inverse/40 font-normal text-xs">
+  <div class="text-text-primary-inverse/40 font-normal text-xs bg-[#081124]">
     <div class="container">
       <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 py-6">
         <p>{brandData.default.name} – {new Date().getFullYear()} г.</p>

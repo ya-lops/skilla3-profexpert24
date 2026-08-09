@@ -13,23 +13,18 @@ const firstServiceUrl = brandData.services[0].url.toLowerCase();
 ---
 
 <section
-  class="hero grid grid-cols-[100%] min-h-[510px] md:min-h-[1000px] mt-[-120px] pt-[110px] lg:mt-[-110px] lg:pt-[120px] mx-2 lg:mx-5 overflow-clip"
+  class="hero grid grid-cols-[100%] min-h-[510px] md:min-h-[700px] mt-[-120px] pt-[110px] lg:mt-[-110px] lg:pt-[120px] bg-accent overflow-clip"
   data-cmp="HeroAbout"
 >
-  <div class="relative h-full isolate">
-    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] h-full items-center isolate">
-      <div class="relative z-1 flex flex-col gap-7 lg:gap-10 py-7 lg:py-14 px-4 lg:px-25">
-        <h1 class="flex flex-col typo-h1 uppercase my-auto">
-          <span class="add-text-gradient">87 000</span>
-          <span class="add-text-gradient">заказов</span>
-          <span class="text-text-primary-inverse">за 10 лет работы</span>
+  <div class="container h-full isolate">
+    <div class="grid grid-cols-1 h-full items-center">
+      <div class="relative z-1 flex flex-col gap-7 lg:gap-10 py-7 lg:py-14">
+        <h1 class="flex flex-col typo-h1 my-auto">
+          <span class="text-text-primary-inverse text-balance">Более 25 000<br>заказов с 2010 года</span>
         </h1>
         <div class="mt-18">
           <Button href={`/${firstServiceUrl}`} variant="primary" text="Наши услуги" />
         </div>
-      </div>
-      <div class="relative z-0 self-end flex items-center justify-end ">
-        <img src="/images/hero-about.webp" alt="" fetchpriority="high" class="lg:max-w-max pointer-events-none" />
       </div>
     </div>
   </div>

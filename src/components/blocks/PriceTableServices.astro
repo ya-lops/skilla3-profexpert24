@@ -25,7 +25,7 @@ const showDiscount = hasDiscount(discountPercent);
 
           return (
             <div
-              class="flex flex-col md:flex-row max-w-256 mx-auto gap-5 py-5 lg:py-10 not-last:border-b not-last:border-b-outline"
+              class="flex flex-col md:flex-row gap-5 py-5 lg:py-10 not-last:border-b not-last:border-b-outline"
               itemscope
               itemtype="https://schema.org/Offer"
               itemprop="itemListElement"
@@ -40,20 +40,20 @@ const showDiscount = hasDiscount(discountPercent);
 
               <div class="flex items-center justify-between md:justify-end gap-10 md:ml-auto">
                 {showDiscount && (
-                  <div class="text-text-secondary line-through typo-t1" aria-hidden="true">
+                  <div class="text-text-secondary/50 line-through typo-t1 font-semibold" aria-hidden="true">
                     <span>
                       от {subService.price} ₽/{subService.unit}
                     </span>
                   </div>
                 )}
 
-                <div class="flex items-center gap-3 text-text-primary typo-t1">
+                <div class="flex items-center gap-3 text-text-primary typo-t1 font-semibold">
                   <span aria-label={`Цена: от ${showDiscount ? discountedPrice : subService.price} рублей за ${subService.unit}`}>
                     от {showDiscount ? discountedPrice : subService.price} ₽/{subService.unit}
                   </span>
                   
                   {showDiscountValue && (
-                    <div class="typo-label p-2 add-gradient-accent text-text-primary-inverse" aria-label={`Скидка ${discountPercent} процентов`}>
+                    <div class="typo-label p-2 bg-[#0B1936] text-text-primary-inverse" aria-label={`Скидка ${discountPercent} процентов`}>
                       <span>-{discountPercent}%</span>
                     </div>
                   )}

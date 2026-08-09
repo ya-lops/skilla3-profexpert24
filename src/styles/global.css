@@ -7,8 +7,8 @@
 }
 
 :root {
-  --site-font-base: "Golos Text", sans-serif;
-  --site-font-heading: "Mulish", sans-serif;
+  --site-font-base: "Mulish", sans-serif;
+  --site-font-heading: "Golos Text", sans-serif;
 
   --_clip-rect-size: 2.125rem;
 

@@ -9,20 +9,56 @@ interface Props {
 const { brandData } = Astro.props;
 ---
 
-<section id="kp" class="scroll-mt-25 m-2 lg:m-5 add-gradient overflow-clip" data-cmp="KP">
+<section id="kp" class="scroll-mt-25 overflow-clip" data-cmp="KP">
   <div class="container">
-    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,4fr)_minmax(0,3fr)] gap-5">
-      <div class="py-10 lg:py-15">
-        <h2 class="typo-h3 mb-6 uppercase text-kp-text text-balance">Бесплатно сделаем коммерческое предложение</h2>
-        <p class="typo-t2 text-kp-text">Индивидуально под ваши потребности</p>
+    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] gap-7">
+      <div class="_start-col mt-(--_clip-rect-size) py-25 bg-accent">
+        <h2 class="typo-h2 mb-6 text-kp-text text-balance">Бесплатно сделаем коммерческое предложение</h2>
+        <p class="typo-t4 text-kp-text">Индивидуально под ваши потребности</p>
         <div class="mt-5 lg:mt-15">
           <KpForm />
         </div>
       </div>
 
-      <div class="flex justify-center items-end">
+      <div class="_end-col flex items-end justify-center add-clip-rect-tl before:bg-[#0B1936]">
         <img src="/images/kp-image.webp" alt="" class="pointer-events-none" />
       </div>
     </div>
   </div>
 </section>
+
+<style is:global>
+  [data-cmp="KP"] {
+    ._start-col {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        right: 99%;
+        left: auto;
+        width: 50vw;
+        background: var(--color-accent);
+      }
+    }
+
+    ._end-col {
+      position: relative;
+
+      &::after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: auto;
+        left: 99%;
+        width: 50vw;
+        background: #0b1936;
+      }
+    }
+  }
+</style>

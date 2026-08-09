@@ -20,7 +20,7 @@ const brandData = await getBrandData();
   <!-- <Breadcrumbs class="relative z-1 mx-auto my-5" items={[{ label: "Главная", href: "/" }, { label: "О компании" }]} /> -->
   <HeroAbout {brandData} />
   <Partners {brandData} />
-  <HowWeWork type="column" {brandData} />
+  <HowWeWork type="grid" {brandData} />
   <Advantages {brandData} />
   <Partners {brandData} full />
   <Testimonials {brandData} />

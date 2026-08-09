@@ -16,7 +16,7 @@ const allPartnersLogos = [...brandData.partners.default_logos, ...(brandData.par
 
 <section class="py-8 md:py-10 lg:py-25" data-cmp="Partners">
   <div class="container">
-    {full && <h2 class="typo-h3 mb-8 md:12 lg:mb-14 uppercase text-center">Наши клиенты</h2>}
+    {full && <h2 class="typo-h2 mb-8 md:12 lg:mb-14">Наши клиенты</h2>}
 
     <div
       class:list={[
@@ -35,7 +35,7 @@ const allPartnersLogos = [...brandData.partners.default_logos, ...(brandData.par
           >
             <img
               class:list={[
-                "h-full w-full object-contain pointer-events-none max-w-[75%] max-h-[75%]",
+                "h-full w-full object-contain pointer-events-none max-w-[50%] max-h-[50%]",
                 full ? "max-w-[35%] max-h-[35%]" : "",
               ]}
               src={`${STORAGE_PATH}${logo}`}

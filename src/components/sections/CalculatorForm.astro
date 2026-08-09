@@ -17,15 +17,11 @@ const discount = getDiscountPercent(brandData.main.adv_price_percent);
 const { price, discountedPrice, showDiscount } = getGlobalMinPriceWithDiscount(brandData.services, discount);
 ---
 
-<section
-  id="calc"
-  class="py-8 md:py-10 lg:py-25 overflow-clip scroll-mt-25 mx-2 lg:mx-5 add-gradient"
-  data-cmp="CalculatorForm"
->
+<section id="calc" class="py-8 md:py-10 lg:py-25 overflow-clip scroll-mt-25 mx-2 lg:mx-5 add-gradient" data-cmp="CalculatorForm">
   <div class="container">
-    <h2 class="mb-15 lg:mb-25 typo-h3 uppercase text-center text-balance text-text-primary-inverse">Калькулятор стоимости персонала</h2>
+    <h2 class="mb-15 lg:mb-25 typo-h2 text-balance text-text-primary">Калькулятор стоимости персонала</h2>
 
-    <div x-data="employeeCostCalculator()" class="max-w-295 mx-auto">
+    <div x-data="employeeCostCalculator()">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-7">
         <CalcInput id="calc-net-salary" label="Зарплата на руки" model="netSalary" unit="₽" min="10000" max="300000" step="10000" />
 
@@ -58,19 +54,23 @@ const { price, discountedPrice, showDiscount } = getGlobalMinPriceWithDiscount(b
 
       <div class="mt-25">
         <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-3 items-stretch">
-          <div class="py-5 lg:py-12.5 text-text-primary-inverse">
+          <div class="py-5 lg:py-12.5 text-text-primary">
             <p class="typo-t4">Стоимость ваших сотрудников</p>
             <p class="mt-6 typo-h5">
               <span class="typo-h3" x-text="fmt(totalPerHour, 2)"></span>
               <span>₽</span>/час
             </p>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-10 mt-10 pt-10 border-t border-t-outline/10 *:flex *:flex-col *:gap-2">
-              <CalculatorFormResultYoursFields />
+            <div class="mt-auto">
+              <div
+                class="grid grid-cols-1 lg:grid-cols-3 gap-7 lg:gap-10 mt-10 pt-10 border-t border-t-outline/50 *:flex *:flex-col *:gap-2"
+              >
+                <CalculatorFormResultYoursFields />
+              </div>
             </div>
           </div>
 
-          <div class="h-full">
+          <div class="h-full add-clip-rect-tr before:bg-[#0B1936]">
             <CalculatorFormResultOurs {brandData} />
           </div>
         </div>

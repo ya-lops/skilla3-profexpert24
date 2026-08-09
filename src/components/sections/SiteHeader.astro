@@ -26,6 +26,7 @@ const links = [
   { href: "/contacts", label: "Контакты", active: currentPath.includes("/contacts") },
 ];
 ---
+
 <div
   x-data="{ mobileNavOpen: false, stuck: false }"
   x-init="window.addEventListener('scroll', () => { stuck = window.scrollY > 50 })"
@@ -35,13 +36,13 @@ const links = [
   <header
     class="transition-all duration-300 border-b border-b-transparent"
     class:list={[isDarkPage ? "text-text-primary-inverse" : "text-text-primary"]}
-    :class="stuck ? 'bg-white border-b-outline! text-text-primary!' : 'bg-header-surface'"
+    :class="stuck ? 'bg-white !text-text-primary' : 'bg-transparent'"
   >
     <div class="container">
       <div class="flex items-center justify-between gap-4 lg:gap-20 py-4 lg:py-6">
         <div class="_header-logo">
           <a href="/" class:list={[isDarkPage ? "text-white" : "text-black"]} :class="stuck ? 'text-black!' : ''">
-            <SiteHeaderLogoSvg/>
+            <SiteHeaderLogoSvg />
           </a>
         </div>
 
@@ -55,7 +56,13 @@ const links = [
                       href={href}
                       class:list={[
                         "flex items-center no-underline p-3 font-bold",
-                        { "text-accent": active, " hover:text-accent": !active },
+                        isDarkPage
+                          ? active
+                            ? "text-[#0B1936]"
+                            : "hover:text-[#0B1936]"
+                          : active
+                            ? "text-accent"
+                            : "text-text-primary hover:text-accent",
                       ]}
                       aria-current={active ? "page" : undefined}
                     >
